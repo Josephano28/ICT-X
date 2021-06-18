@@ -21,7 +21,7 @@ USERNAME = StringVar()
 PASSWORD = StringVar()
 EQUIPMENT_NAME = StringVar()
 STATUS = StringVar()
-EQUIPMENT_QTY = IntVar()
+EQUIPMENT_QTY = StringVar()
 SEARCH = StringVar()
 
 
