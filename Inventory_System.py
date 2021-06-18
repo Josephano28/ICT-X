@@ -14,7 +14,7 @@ all_products = [
 
 def banner():
     print("*************************************")
-    print("\tClix Mobiles Shop")
+    print("\tScience High Laboratory Equipment")
     print("*************************************")
     print("\t1.Show All Products")
     print("\t2.Buy Product")
