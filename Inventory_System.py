@@ -17,7 +17,7 @@ def banner():
     print("\tScience High Laboratory Equipment")
     print("*************************************")
     print("\t1.Show All Products")
-    print("\t2.Buy Product")
+    print("\t2.Borrow Product")
     print("\t3.Add Products")
     print("\t4.Exit")
     print("**************************************")
