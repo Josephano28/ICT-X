@@ -4,7 +4,7 @@ import sqlite3
 import tkinter.ttk as ttk
 
 root = Tk()
-root.title("Science Laboratory Equipment")
+root.title("Science Laboratory Equipments")
 
 width = 1024
 height = 520
@@ -14,7 +14,7 @@ x = (screen_width / 2) - (width / 2)
 y = (screen_height / 2) - (height / 2)
 root.geometry("%dx%d+%d+%d" % (width, height, x, y))
 root.resizable(0, 0)
-root.config(bg="#6666ff")
+root.config(bg="#e6dfd3")
 
 # ========================================VARIABLES========================================
 USERNAME = StringVar()
@@ -42,14 +42,14 @@ def Database():
 
 
 def Exit():
-    result = tkMessageBox.askquestion('Simple Inventory System', 'Are you sure you want to exit?', icon="warning")
+    result = tkMessageBox.askquestion('Simple Inventory Systems', 'Are you sure you want to exit?', icon="warning")
     if result == 'yes':
         root.destroy()
         exit()
 
 
 def Exit2():
-    result = tkMessageBox.askquestion('Science Laboratory Equipment', 'Are you sure you want to exit?', icon="warning")
+    result = tkMessageBox.askquestion('Science Laboratory Equipments', 'Are you sure you want to exit?', icon="warning")
     if result == 'yes':
         Home.destroy()
         exit()
@@ -58,7 +58,7 @@ def Exit2():
 def ShowLoginForm():
     global loginform
     loginform = Toplevel()
-    loginform.title("Science Laboratory Equipment/Account Login")
+    loginform.title("Science Laboratory Equipments/Account Login")
     width = 600
     height = 500
     screen_width = root.winfo_screenwidth()
@@ -96,7 +96,7 @@ def LoginForm():
 def Home():
     global Home
     Home = Tk()
-    Home.title("Science Laboratory Equipment/Home")
+    Home.title("Science Laboratory Equipments/Home")
     width = 1024
     height = 520
     screen_width = Home.winfo_screenwidth()
@@ -119,13 +119,13 @@ def Home():
     menubar.add_cascade(label="Account", menu=filemenu)
     menubar.add_cascade(label="Inventory", menu=filemenu2)
     Home.config(menu=menubar)
-    Home.config(bg="#6666ff")
+    Home.config(bg="#e6dfd3")
 
 
 def ShowAddNew():
     global addnewform
     addnewform = Toplevel()
-    addnewform.title("Science Laboratory Equipment/Add new")
+    addnewform.title("Science Laboratory Equipments/Add new")
     width = 600
     height = 500
     screen_width = Home.winfo_screenwidth()
@@ -245,7 +245,7 @@ def Delete():
     if not tree.selection():
         print("ERROR")
     else:
-        result = tkMessageBox.askquestion('Science Laboratory Equipment', 'Are you sure you want to delete this record?',
+        result = tkMessageBox.askquestion('Science Laboratory Equipments', 'Are you sure you want to delete this record?',
                                           icon="warning")
         if result == 'yes':
             curItem = tree.focus()
@@ -262,7 +262,7 @@ def Delete():
 def ShowView():
     global viewform
     viewform = Toplevel()
-    viewform.title("Science Laboratory Equipment/View Product")
+    viewform.title("Science Laboratory Equipments/View Product")
     width = 600
     height = 400
     screen_width = Home.winfo_screenwidth()
