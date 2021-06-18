@@ -162,12 +162,12 @@ def AddNewForm():
 
 def AddNew():
     Database()
-    cursor.execute("INSERT INTO `product` (product_name, product_qty, product_price) VALUES(?, ?, ?)",
+    cursor.execute("INSERT INTO `product` (equipment_name, status, equipment_qty) VALUES(?, ?, ?)",
                    (str(EQUIPMENT_NAME.get()), int(STATUS.get()), int(EQUIPMENT_QTY.get())))
     conn.commit()
     EQUIPMENT_NAME.set("")
     STATUS.set("")
-    EQUPMENT_QTY.set("")
+    EQUIPMENT_QTY.set("")
     cursor.close()
     conn.close()
 
@@ -194,16 +194,16 @@ def ViewForm():
     btn_delete.pack(side=TOP, padx=10, pady=10, fill=X)
     scrollbarx = Scrollbar(MidViewForm, orient=HORIZONTAL)
     scrollbary = Scrollbar(MidViewForm, orient=VERTICAL)
-    tree = ttk.Treeview(MidViewForm, columns=("ProductID", "Product Name", "Product Qty", "Product Price"),
+    tree = ttk.Treeview(MidViewForm, columns=("ProductID", "Equipment Name", "Status", "Equipment Qty"),
                         selectmode="extended", height=100, yscrollcommand=scrollbary.set, xscrollcommand=scrollbarx.set)
     scrollbary.config(command=tree.yview)
     scrollbary.pack(side=RIGHT, fill=Y)
     scrollbarx.config(command=tree.xview)
     scrollbarx.pack(side=BOTTOM, fill=X)
     tree.heading('ProductID', text="ProductID", anchor=W)
-    tree.heading('Product Name', text="Product Name", anchor=W)
-    tree.heading('Product Qty', text="Product Qty", anchor=W)
-    tree.heading('Product Price', text="Product Price", anchor=W)
+    tree.heading('Equipment Name', text="Equipment Name", anchor=W)
+    tree.heading('Status', text="Status", anchor=W)
+    tree.heading('Equipment Qty', text="Equipment Qty", anchor=W)
     tree.column('#0', stretch=NO, minwidth=0, width=0)
     tree.column('#1', stretch=NO, minwidth=0, width=0)
     tree.column('#2', stretch=NO, minwidth=0, width=200)
