@@ -3,7 +3,7 @@ import tkinter.messagebox as tkMessageBox
 import sqlite3
 import tkinter.ttk as ttk
 root = Tk()
-root.title("Simple Inventory System")
+root.title("Science Laboratory Equipment")
 
 width = 1024
 height = 520
@@ -18,9 +18,9 @@ root.config(bg="#6666ff")
 #========================================VARIABLES========================================
 USERNAME = StringVar()
 PASSWORD = StringVar()
-PRODUCT_NAME = StringVar()
-PRODUCT_PRICE = IntVar()
-PRODUCT_QTY = IntVar()
+EQUIPMENT_NAME = StringVar()
+STATUS = IntVar()
+EQUIPMENT_QUANTITY = IntVar()
 SEARCH = StringVar()
 
 #========================================METHODS==========================================
@@ -139,22 +139,22 @@ def AddNewForm():
     lbl_qty.grid(row=1, sticky=W)
     lbl_price = Label(MidAddNew, text="Product Price:", font=('arial', 25), bd=10)
     lbl_price.grid(row=2, sticky=W)
-    productname = Entry(MidAddNew, textvariable=PRODUCT_NAME, font=('arial', 25), width=15)
+    productname = Entry(MidAddNew, textvariable=EQUIPMENT_NAME, font=('arial', 25), width=15)
     productname.grid(row=0, column=1)
-    productqty = Entry(MidAddNew, textvariable=PRODUCT_QTY, font=('arial', 25), width=15)
+    productqty = Entry(MidAddNew, textvariable=STATUS, font=('arial', 25), width=15)
     productqty.grid(row=1, column=1)
-    productprice = Entry(MidAddNew, textvariable=PRODUCT_PRICE, font=('arial', 25), width=15)
+    productprice = Entry(MidAddNew, textvariable=EQUIPMENT_QUANTITY, font=('arial', 25), width=15)
     productprice.grid(row=2, column=1)
     btn_add = Button(MidAddNew, text="Save", font=('arial', 18), width=30, bg="#009ACD", command=AddNew)
     btn_add.grid(row=3, columnspan=2, pady=20)
 
 def AddNew():
     Database()
-    cursor.execute("INSERT INTO `product` (product_name, product_qty, product_price) VALUES(?, ?, ?)", (str(PRODUCT_NAME.get()), int(PRODUCT_QTY.get()), int(PRODUCT_PRICE.get())))
+    cursor.execute("INSERT INTO `product` (product_name, product_qty, product_price) VALUES(?, ?, ?)", (str(EQUIPMENT_NAME.get()), int(STATUS.get()), int(EQUIPMENT_QUANTITY.get())))
     conn.commit()
-    PRODUCT_NAME.set("")
-    PRODUCT_PRICE.set("")
-    PRODUCT_QTY.set("")
+    EQUIPMENT_NAME.set("")
+    STATUS.set("")
+    EQUPMENT_QUANTITY.set("")
     cursor.close()
     conn.close()
 
