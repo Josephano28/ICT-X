@@ -49,7 +49,7 @@ def Exit():
 
 
 def Exit2():
-    result = tkMessageBox.askquestion('Simple Inventory System', 'Are you sure you want to exit?', icon="warning")
+    result = tkMessageBox.askquestion('Science Laboratory Equipment', 'Are you sure you want to exit?', icon="warning")
     if result == 'yes':
         Home.destroy()
         exit()
@@ -58,7 +58,7 @@ def Exit2():
 def ShowLoginForm():
     global loginform
     loginform = Toplevel()
-    loginform.title("Simple Inventory System/Account Login")
+    loginform.title("Science Laboratory Equipment/Account Login")
     width = 600
     height = 500
     screen_width = root.winfo_screenwidth()
@@ -96,7 +96,7 @@ def LoginForm():
 def Home():
     global Home
     Home = Tk()
-    Home.title("Simple Inventory System/Home")
+    Home.title("Science Laboratory Equipment/Home")
     width = 1024
     height = 520
     screen_width = Home.winfo_screenwidth()
@@ -107,7 +107,7 @@ def Home():
     Home.resizable(0, 0)
     Title = Frame(Home, bd=1, relief=SOLID)
     Title.pack(pady=10)
-    lbl_display = Label(Title, text="Simple Inventory System", font=('arial', 45))
+    lbl_display = Label(Title, text="Science Laboratory Equipment", font=('arial', 45))
     lbl_display.pack()
     menubar = Menu(Home)
     filemenu = Menu(menubar, tearoff=0)
@@ -125,7 +125,7 @@ def Home():
 def ShowAddNew():
     global addnewform
     addnewform = Toplevel()
-    addnewform.title("Simple Inventory System/Add new")
+    addnewform.title("Science Laboratory Equipment/Add new")
     width = 600
     height = 500
     screen_width = Home.winfo_screenwidth()
@@ -245,7 +245,7 @@ def Delete():
     if not tree.selection():
         print("ERROR")
     else:
-        result = tkMessageBox.askquestion('Simple Inventory System', 'Are you sure you want to delete this record?',
+        result = tkMessageBox.askquestion('Science Laboratory Equipment', 'Are you sure you want to delete this record?',
                                           icon="warning")
         if result == 'yes':
             curItem = tree.focus()
@@ -262,7 +262,7 @@ def Delete():
 def ShowView():
     global viewform
     viewform = Toplevel()
-    viewform.title("Simple Inventory System/View Product")
+    viewform.title("Science Laboratory Equipment/View Product")
     width = 600
     height = 400
     screen_width = Home.winfo_screenwidth()
@@ -275,7 +275,7 @@ def ShowView():
 
 
 def Logout():
-    result = tkMessageBox.askquestion('Simple Inventory System', 'Are you sure you want to logout?', icon="warning")
+    result = tkMessageBox.askquestion('Science Laboratory Equipment', 'Are you sure you want to logout?', icon="warning")
     if result == 'yes':
         admin_id = ""
         root.deiconify()
