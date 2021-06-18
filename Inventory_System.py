@@ -5,7 +5,7 @@ import random
 import sys
 
 all_products = [
-    [1, 'Smart Phone', 20, '200$'], 
+    [1, 'Beaker', 20, '200$'], 
     [2, 'Head Phones', 100, '30$'], 
     [3, 'Screen Guard', 200, '5$'], 
     [4, 'Chargers', 100, '10$'], 
