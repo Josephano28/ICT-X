@@ -20,7 +20,7 @@ root.config(bg="#e6dfd3")
 USERNAME = StringVar()
 PASSWORD = StringVar()
 EQUIPMENT_NAME = StringVar()
-STATUS = IntVar()
+STATUS = StringVar()
 EQUIPMENT_QTY = IntVar()
 SEARCH = StringVar()
 
