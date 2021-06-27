@@ -99,7 +99,7 @@ def Home():
     Home.resizable(0, 0)
     Title = Frame(Home, bd=1, relief=SOLID)
     Title.pack(pady=10)
-    lbl_display = Label(Title, text="Simple Inventory System", font=('arial', 45))
+    lbl_display = Label(Title, text="Science Laboratory Equipments", font=('arial', 45))
     lbl_display.pack()
     menubar = Menu(Home)
     filemenu = Menu(menubar, tearoff=0)
