@@ -126,7 +126,7 @@ def Home():
 def ShowAddNew():
     global addnewform
     addnewform = Toplevel()
-    addnewform.title("Science Laboratory Equipments/Add new")
+    addnewform.title("Science Laboratory Equipments/Update")
     width = 600
     height = 500
     screen_width = Home.winfo_screenwidth()
@@ -263,7 +263,7 @@ def Delete():
 def ShowView():
     global viewform
     viewform = Toplevel()
-    viewform.title("Science Laboratory Equipments/View Product")
+    viewform.title("Science Laboratory Equipments/View Equipments")
     width = 600
     height = 400
     screen_width = Home.winfo_screenwidth()
