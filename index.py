@@ -14,7 +14,7 @@ x = (screen_width/2) - (width/2)
 y = (screen_height/2) - (height/2)
 root.geometry("%dx%d+%d+%d" % (width, height, x, y))
 root.resizable(0, 0)
-root.config(bg="#6666ff")
+root.config(bg="#e6dfd3")
 
 #========================================VARIABLES========================================
 USERNAME = StringVar()
@@ -111,7 +111,7 @@ def Home():
     menubar.add_cascade(label="Account", menu=filemenu)
     menubar.add_cascade(label="Inventory", menu=filemenu2)
     Home.config(menu=menubar)
-    Home.config(bg="#6666ff")
+    Home.config(bg="#e6dfd3")
 
 def ShowAddNew():
     global addnewform
