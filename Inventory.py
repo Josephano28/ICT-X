@@ -42,7 +42,7 @@ def Database():
 
 
 def Exit():
-    result = tkMessageBox.askquestion('Simple Inventory Systems', 'Are you sure you want to exit?', icon="warning")
+    result = tkMessageBox.askquestion('Science Laboratory Equipments', 'Are you sure you want to exit?', icon="warning")
     if result == 'yes':
         root.destroy()
         exit()
