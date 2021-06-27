@@ -4,7 +4,7 @@ import sqlite3
 import tkinter.ttk as ttk
 #Thanks To Mark Arvin
 root = Tk()
-root.title("Simple Inventory System")
+root.title("Science Laboratory Equipments")
 
 width = 1024
 height = 520
@@ -38,13 +38,13 @@ def Database():
         conn.commit()
 
 def Exit():
-    result = tkMessageBox.askquestion('Simple Inventory System', 'Are you sure you want to exit?', icon="warning")
+    result = tkMessageBox.askquestion('Science Laboratory Equipments', 'Are you sure you want to exit?', icon="warning")
     if result == 'yes':
         root.destroy()
         exit()
 
 def Exit2():
-    result = tkMessageBox.askquestion('Simple Inventory System', 'Are you sure you want to exit?', icon="warning")
+    result = tkMessageBox.askquestion('Science Laboratory Equipments', 'Are you sure you want to exit?', icon="warning")
     if result == 'yes':
         Home.destroy()
         exit()
@@ -52,7 +52,7 @@ def Exit2():
 def ShowLoginForm():
     global loginform
     loginform = Toplevel()
-    loginform.title("Simple Inventory System/Account Login")
+    loginform.title("Science Laboratory Equipments/Account Login")
     width = 600
     height = 500
     screen_width = root.winfo_screenwidth()
@@ -88,7 +88,7 @@ def LoginForm():
 def Home():
     global Home
     Home = Tk()
-    Home.title("Simple Inventory System/Home")
+    Home.title("Science Laboratory Equipments/Home")
     width = 1024
     height = 520
     screen_width = Home.winfo_screenwidth()
@@ -116,7 +116,7 @@ def Home():
 def ShowAddNew():
     global addnewform
     addnewform = Toplevel()
-    addnewform.title("Simple Inventory System/Add new")
+    addnewform.title("Science Laboratory Equipments/Add new")
     width = 600
     height = 500
     screen_width = Home.winfo_screenwidth()
@@ -227,7 +227,7 @@ def Delete():
     if not tree.selection():
        print("ERROR")
     else:
-        result = tkMessageBox.askquestion('Simple Inventory System', 'Are you sure you want to delete this record?', icon="warning")
+        result = tkMessageBox.askquestion('Science Laboratory Equipments', 'Are you sure you want to delete this record?', icon="warning")
         if result == 'yes':
             curItem = tree.focus()
             contents =(tree.item(curItem))
@@ -243,7 +243,7 @@ def Delete():
 def ShowView():
     global viewform
     viewform = Toplevel()
-    viewform.title("Simple Inventory System/View Product")
+    viewform.title("Science Laboratory Equipments/View Product")
     width = 600
     height = 400
     screen_width = Home.winfo_screenwidth()
@@ -255,7 +255,7 @@ def ShowView():
     ViewForm()
 
 def Logout():
-    result = tkMessageBox.askquestion('Simple Inventory System', 'Are you sure you want to logout?', icon="warning")
+    result = tkMessageBox.askquestion('Science Laboratory Equipments', 'Are you sure you want to logout?', icon="warning")
     if result == 'yes': 
         admin_id = ""
         root.deiconify()
@@ -302,7 +302,7 @@ Title = Frame(root, bd=1, relief=SOLID)
 Title.pack(pady=10)
 
 #========================================LABEL WIDGET=====================================
-lbl_display = Label(Title, text="Simple Inventory System", font=('arial', 45))
+lbl_display = Label(Title, text="Science Laboratory Equipments", font=('arial', 45))
 lbl_display.pack()
 
 #========================================INITIALIZATION===================================
