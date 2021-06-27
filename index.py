@@ -325,10 +325,10 @@ root.config(menu=menubar)
 
 # ========================================FRAME============================================
 Title = Frame(root, bd=1, relief=SOLID)
-Title.pack(pady=10)
+Title.pack(pady=11)
 
 # ========================================LABEL WIDGET=====================================
-lbl_display = Label(Title, text="Science Laboratory Equipments", font=('arial', 45))
+lbl_display = Label(Title, text="Science Laboratory Equipments", font=('arial', 46))
 lbl_display.pack()
 
 # ========================================INITIALIZATION===================================
